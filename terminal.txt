@@ -1,0 +1,37 @@
+<----- Terminal basics ----->
+
+pwd
+    - viser hvilken mappe du står i (din “path”)
+
+ls
+    - list filer i mappen
+    - ls -l detaljer
+    - ls -a inkl. skjulte filer
+
+cd
+    - skift mappe
+    - cd .. en mappe op
+    - cd ~ hjemmemappe
+
+mkdir
+    - lav ny mappe: mkdir projekter
+
+touch
+    - lav ny tom fil: touch app.py
+
+cp
+    - kopiér: cp fil.txt kopi.txt
+    - kopiér mappe: cp -r mappe ny_mappe
+
+mv
+    - flyt/omdøb: mv gammel.txt ny.txt
+
+rm
+    - slet fil: rm fil.txt
+    - slet mappe: rm -r mappe (pas på)
+
+cat
+    - vis filindhold: cat app.py
+
+code .
+    - åbn mappen i VS Code (hvis du har code i PATH)

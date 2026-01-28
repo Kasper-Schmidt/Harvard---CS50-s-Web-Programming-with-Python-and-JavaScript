@@ -1,0 +1,157 @@
+<----- Git basics (mest brugte) ----->
+
+git clone
+    - hent repo ned: git clone <url>
+
+git init
+    - start nyt git-repo i en mappe: git init
+
+git status
+    - viser ændringer, staged/unstaged, og hvad der mangler at blive committed
+
+git log
+    - commit historik
+    - git log --oneline --graph --decorate --all (nice overblik)
+
+git diff
+    - se ændringer der ikke er staged: git diff
+    - se ændringer der ER staged: git diff --staged
+
+git add
+    - stage en fil: git add app.py
+    - stage alt: git add .
+
+git commit
+    - commit staged ændringer: git commit -m "Kort besked"
+
+git branch
+    - vis branches
+
+git switch
+    - skift branch: git switch main
+    - lav ny branch og skift til den: git switch -c feature/login
+
+git remote -v
+    - se remote (typisk origin)
+
+git push
+    - push din branch: git push
+    - første gang på ny branch: git push -u origin feature/login
+
+git pull
+    - hent + merge fra remote: git pull
+
+git fetch
+    - hent fra remote uden at merge: git fetch
+
+git restore
+    - smid lokale ændringer væk i en fil: git restore app.py
+
+git restore --staged
+    - unstage en fil: git restore --staged app.py
+
+git reset
+    - flyt HEAD tilbage (kan være farligt, men nyttigt)
+    - fx “fortryd commit men behold ændringer”: git reset --soft HEAD~1
+
+git stash
+    - gem ændringer midlertidigt: git stash
+    - få dem tilbage: git stash pop
+
+
+
+
+<----- Typisk workflow (daglig) ----->
+
+1. git status
+2. redigér filer
+3. git add .
+4. git commit -m "besked"
+5. git push
+
+
+git clone
+    - Tag en repository og download den ned
+
+git add <filnavn>
+    - Fortæller git, at jeg gerne vil tilføje en fil/mappe til mit næste commit
+
+git commit -m "message"
+    - save the current state af filer, mapper osv
+    - Git is going to save a new snapshot of a version of your code, keeping track og the old version(s)
+
+git commit -am "message"
+    - commit all of the files that have been changed
+
+git status 
+    - Tjekker branch, om det er master eller en anden
+    - Viser om der er noget i commit
+
+git push
+    - skubber alle sine lagrede commits up
+
+git pull    
+    - hent de nyeste ændringer jeg ikke har, som ligger på repository
+
+
+
+
+
+<----- Merge Conflict ----->
+
+Åben i kode og fiks koden
+
+
+
+
+
+
+
+<----- Skift til branch ----->
+
+git branch
+    - Siger hvilken branch man er på og hvilke der eksisterer
+
+git chechout -b style
+    - Skifter til ny branch, som hedder style
+    - Nu sker ens commits kun på denne branch
+
+    - git checkout master
+        - skifter nu til master igen, og ser at de ændringer man lavede til style, ikke er der
+
+    MERGE ny til master
+    git merge style  
+        - merger style til master, hvis der ikke er merge conflicts
+
+
+
+
+
+<----- Forking ----->
+
+- Bruges til at contribute til en repository, f.eks. BootStrap, da det er community lavet
+- Man kan også gøre så andre kan fork sin egen kode og så kan andre contribute til min kode
+    - Det foregår ved at der laves en kopi af den originale repository
+
+
+
+
+
+<----- Github Pages ----->
+
+Gratis og hurtig måde man kan tage en simpel hjemmeside og deploy den for at andre kan kigge på den.
+
+Konventional navn for sådan en er:
+
+Ny repository med navn:
+    brugernavn.github.io
+    Kasper-Schmidt.github.io    <--    burde min være
+
+Så supporter den automatisk Github Pages og jeg kan klone den ned
+    - Her kan man så lave ændringer, skubbe op og se på siden
+
+Man kan tilgå siden i:
+    - Settings
+    - Scroll ned til Github Pages
+
+
