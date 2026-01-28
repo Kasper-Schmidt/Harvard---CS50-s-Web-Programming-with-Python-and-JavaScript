@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script>
+        var counter = 0;
+
+        function countUp() {
+            counter++
+            document.querySelector('h1').innerHTML = counter
+
+            if (counter % 10 === 0) {
+                alert(`Count is now ${counter}`);
+            }
+        }
+
+         function countDown() {
+            counter--
+            document.querySelector('h1').innerHTML = counter
+        }
+
+    </script>
+
+    <style>
+
+        .up, .down {
+            color: white;
+            padding: 5px;
+            border: none;
+        }
+
+        .up {
+            background-color: green;  
+        }
+
+        .down {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>0</h1>
+    <button onclick="countUp()" class="up">Add</button>
+     <button onclick="countDown()" class="down">Subtract</button>
+</body>
+</html>
